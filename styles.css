@@ -106,10 +106,6 @@ svg { width: 100%; height: 100%; }
 .btn--ghost { background: transparent; color: var(--texto); border-color: rgba(255,255,255,.18); }
 .btn--ghost:hover { border-color: var(--texto); transform: translateY(-3px); }
 
-.link-arrow { font-weight: 700; color: var(--verde); font-size: .92rem; }
-.link-arrow::after { content: ' →'; transition: margin var(--trans); display: inline-block; }
-.link-arrow:hover::after { margin-left: .35rem; }
-
 /* ---------- Header ---------- */
 .header {
   position: fixed; inset: 0 0 auto 0; z-index: 100;
@@ -167,7 +163,6 @@ svg { width: 100%; height: 100%; }
   border: 1px solid rgba(255,255,255,.08);
 }
 .img-slot--portrait { aspect-ratio: 4 / 5; }
-.img-slot--post { aspect-ratio: 16 / 10; border-radius: var(--radio) var(--radio) 0 0; border-bottom: 0; }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -311,18 +306,6 @@ svg { width: 100%; height: 100%; }
   font-size: .62rem; color: var(--texto-tenue); text-transform: uppercase; letter-spacing: .08em;
 }
 .avatar img { width: 100%; height: 100%; object-fit: cover; }
-
-/* ---------- Blog ---------- */
-.posts { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.6rem; }
-.post {
-  border: 1px solid var(--borde); border-radius: var(--radio); overflow: hidden; background: var(--superficie);
-  transition: transform var(--trans), box-shadow var(--trans), border-color var(--trans);
-}
-.post:hover { transform: translateY(-6px); box-shadow: var(--sombra); border-color: var(--borde-fuerte); }
-.post__body { padding: 1.7rem; }
-.post__meta { font-size: .78rem; text-transform: uppercase; letter-spacing: .12em; color: var(--verde); font-weight: 700; }
-.post__title { font-size: 1.14rem; margin-bottom: .7rem; }
-.post p { color: var(--texto-suave); font-size: .96rem; }
 
 /* ---------- FAQ ---------- */
 .faq { display: grid; gap: .8rem; }

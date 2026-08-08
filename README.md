@@ -50,14 +50,15 @@ Para colocar una imagen real, sustituye el contenido del recuadro por una etique
   de toda la web.
 - **Nombre y datos de contacto:** email, teléfono y dirección son de ejemplo. Aparecen en la
   sección de contacto y en el footer.
-- **WhatsApp:** hay seis enlaces `wa.me` en `index.html` (los cuatro botones de Servicios,
-  el de Contacto, el botón flotante y el del footer), todos con el número de ejemplo
-  `5491100000000`. Reemplazalo por el real: código de país + área, sin `+`, espacios ni
-  guiones. Cada botón de Servicios lleva un mensaje distinto ya escrito, así sabés desde
-  qué plan te escriben.
+- **WhatsApp:** hay siete enlaces `wa.me` en `index.html` (los cuatro botones de Servicios,
+  el de Contacto, el del footer y el botón flotante), todos con el número real
+  `5493424863765`. Si alguna vez cambia, el formato es código de país + área + número,
+  sin `+`, espacios ni guiones. Cada botón de Servicios lleva un mensaje distinto ya
+  escrito, así sabés desde qué plan te escriben.
 - **Instagram:** ya apunta a la cuenta real, `@mr_entrenamiento` (sección Contacto y footer).
 
-No hay formulario de contacto: toda la conversión pasa por WhatsApp e Instagram.
+No hay formulario de contacto: toda la conversión pasa por WhatsApp e Instagram, así que
+esos enlaces son el único canal de entrada. Si dejan de funcionar, la página deja de convertir.
 
 ## Accesibilidad
 

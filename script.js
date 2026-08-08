@@ -80,65 +80,6 @@
     secciones.forEach(function (s) { obsNav.observe(s); });
   }
 
-  /* ---------- Formulario de contacto ---------- */
-  var form = document.getElementById('form');
-  var estado = document.getElementById('form-status');
-
-  function mostrarError(campo, mensaje) {
-    var span = document.querySelector('[data-error-for="' + campo.id + '"]');
-    if (span) span.textContent = mensaje;
-    campo.classList.toggle('is-invalid', Boolean(mensaje));
-  }
-
-  function validar() {
-    var ok = true;
-    var nombre = document.getElementById('nombre');
-    var email = document.getElementById('email');
-    var mensaje = document.getElementById('mensaje');
-    var privacidad = document.getElementById('privacidad');
-
-    if (!nombre.value.trim()) { mostrarError(nombre, 'Escribe tu nombre.'); ok = false; }
-    else mostrarError(nombre, '');
-
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim())) {
-      mostrarError(email, 'Introduce un email válido.'); ok = false;
-    } else mostrarError(email, '');
-
-    if (mensaje.value.trim().length < 10) {
-      mostrarError(mensaje, 'Cuéntame un poco más (mínimo 10 caracteres).'); ok = false;
-    } else mostrarError(mensaje, '');
-
-    var errPriv = document.querySelector('[data-error-for="privacidad"]');
-    if (!privacidad.checked) {
-      if (errPriv) errPriv.textContent = 'Debes aceptar la política de privacidad.';
-      ok = false;
-    } else if (errPriv) errPriv.textContent = '';
-
-    return ok;
-  }
-
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      estado.className = 'form__status';
-
-      if (!validar()) {
-        estado.textContent = 'Revisa los campos marcados.';
-        estado.classList.add('is-error');
-        return;
-      }
-
-      // TODO: conectar con el backend o servicio de formularios (Formspree, EmailJS, etc.)
-      estado.textContent = '¡Gracias! He recibido tu mensaje y te respondo en menos de 24 h.';
-      estado.classList.add('is-ok');
-      form.reset();
-    });
-
-    form.addEventListener('input', function (e) {
-      if (e.target.classList.contains('is-invalid')) mostrarError(e.target, '');
-    });
-  }
-
   /* ---------- Scroll suave compensando el header fijo ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
     a.addEventListener('click', function (e) {

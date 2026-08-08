@@ -13,7 +13,7 @@ HTML, CSS y JavaScript sin dependencias ni proceso de compilación.
 ```
 index.html    Estructura y contenido
 styles.css    Estilos (paleta y medidas en :root)
-script.js     Menú móvil, animaciones, contadores y validación del formulario
+script.js     Menú móvil, animaciones de entrada y navegación activa
 img/          Imágenes del sitio
 ```
 
@@ -50,12 +50,15 @@ Para colocar una imagen real, sustituye el contenido del recuadro por una etique
   de toda la web.
 - **Nombre y datos de contacto:** email, teléfono y dirección son de ejemplo. Aparecen en la
   sección de contacto y en el footer.
-- **Formulario:** valida en el navegador pero todavía no envía nada. Hay un `TODO` en
-  `script.js` donde conectar Formspree, EmailJS o un backend propio.
-- **WhatsApp:** los cuatro botones de la sección Servicios apuntan al número de ejemplo
-  `5491100000000`. Reemplazalo por el número real (código de país + área, sin `+` ni espacios)
-  en las cuatro URLs `wa.me` de `index.html`. Cada botón lleva un mensaje distinto ya escrito,
-  así sabés desde qué plan te escriben.
+- **WhatsApp:** hay seis enlaces `wa.me` en `index.html` (los cuatro botones de Servicios,
+  el de Contacto, el botón flotante y el del footer), todos con el número de ejemplo
+  `5491100000000`. Reemplazalo por el real: código de país + área, sin `+`, espacios ni
+  guiones. Cada botón de Servicios lleva un mensaje distinto ya escrito, así sabés desde
+  qué plan te escriben.
+- **Instagram:** los dos enlaces apuntan a `instagram.com/maxtraining`, que es un usuario
+  de ejemplo.
+
+No hay formulario de contacto: toda la conversión pasa por WhatsApp e Instagram.
 
 ## Accesibilidad
 

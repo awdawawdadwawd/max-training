@@ -5,7 +5,7 @@ HTML, CSS y JavaScript sin dependencias ni proceso de compilación.
 
 ## Ver la página
 
-- **En producción:** _(pendiente de activar GitHub Pages)_
+- **En producción:** https://awdawawdadwawd.github.io/max-training/
 - **En local:** abre `index.html` en el navegador. No hace falta servidor.
 
 ## Estructura

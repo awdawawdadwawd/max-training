@@ -285,26 +285,26 @@ svg { width: 100%; height: 100%; }
 .step h3 { font-size: 1.08rem; margin-bottom: .5rem; }
 .step p { color: var(--texto-suave); font-size: .95rem; margin: 0; }
 
-/* ---------- Planes (tarjetas claras sobre fondo oscuro) ---------- */
+/* ---------- Planes ---------- */
 .plans { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.6rem; align-items: stretch; }
 .plan {
-  position: relative; background: #fff; border-radius: 22px; padding: 2.5rem 2.3rem;
-  border: 1px solid transparent; display: flex; flex-direction: column;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, .45);
-  transition: transform var(--trans), box-shadow var(--trans), border-color var(--trans);
+  position: relative; background: var(--superficie); border-radius: 22px; padding: 2.5rem 2.3rem;
+  border: 1px solid var(--borde); display: flex; flex-direction: column;
+  transition: transform var(--trans), box-shadow var(--trans), border-color var(--trans), background var(--trans);
 }
 .plan:hover {
   transform: translateY(-6px);
-  box-shadow: 0 30px 65px rgba(0, 0, 0, .6);
-  border-color: rgba(20, 192, 136, .5);
+  box-shadow: var(--sombra);
+  border-color: rgba(20, 192, 136, .35);
+  background: var(--superficie-2);
 }
-.plan__name { font-size: 1.45rem; font-weight: 700; color: #101413; margin-bottom: .8rem; }
-.plan__desc { font-size: .95rem; color: #6b7280; margin-bottom: 1.7rem; }
+.plan__name { font-size: 1.45rem; font-weight: 700; color: var(--texto); margin-bottom: .8rem; }
+.plan__desc { font-size: .95rem; color: var(--texto-suave); margin-bottom: 1.7rem; }
 .plan__list { display: grid; gap: .9rem; margin-bottom: 2.2rem; flex: 1; }
-.plan__list li { position: relative; padding-left: 1.5rem; font-size: .98rem; color: #4b5563; }
+.plan__list li { position: relative; padding-left: 1.5rem; font-size: .98rem; color: var(--texto-suave); }
 .plan__list li::before {
   content: '•'; position: absolute; left: .3rem; top: -.15rem;
-  color: #9ca3af; font-size: 1.25rem; line-height: 1.5;
+  color: var(--verde); font-size: 1.25rem; line-height: 1.5;
 }
 
 /* Botón de WhatsApp: sin mayúsculas, alineado a la izquierda */

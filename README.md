@@ -19,8 +19,8 @@ img/          Imágenes del sitio
 
 ## Secciones
 
-Hero · Marquesina · Sobre mí · Tu objetivo · Visión · El proceso · Servicios ·
-Opiniones · CTA · Blog · Preguntas frecuentes · Contacto · Footer
+Hero · Marquesina · Sobre mí · Tu objetivo · El proceso · Servicios ·
+Opiniones · Blog · Preguntas frecuentes · Contacto · Footer
 
 ## Imágenes pendientes
 
@@ -31,7 +31,6 @@ Cada uno está marcado con un atributo `data-slot`:
 | ------------------------ | --------------------------- | ---------- |
 | `hero`                   | Foto principal              | vertical   |
 | `sobre-mi`               | Retrato de la sección Sobre mí | 4:5     |
-| `vision`                 | Sección Visión              | 4:3        |
 | `post-1`, `post-2`, `post-3` | Portadas del blog       | 16:10      |
 | `avatar-1`, `avatar-2`, `avatar-3` | Fotos de las reseñas | 1:1     |
 

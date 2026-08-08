@@ -22,13 +22,11 @@
   --verde-claro:  #4ee0ab;
   --verde-osc:    #0e9c6d;
   --verde-tinte:  rgba(20, 192, 136, .12);
-  --verde-hondo:  #0a5745;   /* paneles verdes */
   --sobre-verde:  #03241b;   /* texto sobre verde brillante */
 
   --radio:        18px;
   --radio-pill:   999px;
   --sombra:       0 18px 45px rgba(0, 0, 0, .55);
-  --sombra-alta:  0 28px 70px rgba(0, 0, 0, .7);
   --brillo:       0 14px 40px rgba(20, 192, 136, .28);
   --contenedor:   1240px;
   --header-h:     92px;
@@ -76,17 +74,13 @@ svg { width: 100%; height: 100%; }
   padding: .4rem 1rem; border-radius: var(--radio-pill);
   margin: 0 0 1.1rem;
 }
-.eyebrow--light { color: #d6fff0; background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.18); }
 
 .h2 { font-size: clamp(2rem, 4.2vw, 3.15rem); font-weight: 800; margin-bottom: 1.1rem; }
-.h2--light { color: #fff; }
 .hl { color: var(--verde); }
 .dot { color: var(--verde); }
-.dot--light { color: var(--verde-claro); }
 
 .lead { font-size: 1.08rem; color: var(--texto-suave); max-width: 60ch; }
 .lead--center { margin-inline: auto; }
-.lead--light { color: rgba(255,255,255,.78); margin-inline: auto; }
 
 /* ---------- Botones ---------- */
 .btn {
@@ -111,9 +105,6 @@ svg { width: 100%; height: 100%; }
 
 .btn--ghost { background: transparent; color: var(--texto); border-color: rgba(255,255,255,.18); }
 .btn--ghost:hover { border-color: var(--texto); transform: translateY(-3px); }
-
-.btn--white { background: #fff; color: var(--sobre-verde); }
-.btn--white:hover { transform: translateY(-3px); box-shadow: 0 18px 40px rgba(0,0,0,.5); }
 
 .link-arrow { font-weight: 700; color: var(--verde); font-size: .92rem; }
 .link-arrow::after { content: ' →'; transition: margin var(--trans); display: inline-block; }
@@ -175,9 +166,7 @@ svg { width: 100%; height: 100%; }
   background: rgba(255,255,255,.06); color: var(--texto-suave);
   border: 1px solid rgba(255,255,255,.08);
 }
-.img-slot__label--light { background: rgba(255,255,255,.14); color: #fff; }
 .img-slot--portrait { aspect-ratio: 4 / 5; }
-.img-slot--vision { aspect-ratio: 4 / 3; border-color: rgba(255,255,255,.28); background: rgba(255,255,255,.06); }
 .img-slot--post { aspect-ratio: 16 / 10; border-radius: var(--radio) var(--radio) 0 0; border-bottom: 0; }
 
 /* ---------- Hero ---------- */
@@ -259,20 +248,6 @@ svg { width: 100%; height: 100%; }
 .card__title { font-size: 1.16rem; font-weight: 700; margin-bottom: .7rem; }
 .card p { color: var(--texto-suave); font-size: .97rem; margin: 0; }
 
-/* ---------- Visión ---------- */
-.vision {
-  background: linear-gradient(135deg, var(--verde-hondo) 0%, #06382c 55%, #052a22 100%);
-  color: #fff; position: relative; overflow: hidden;
-}
-.vision::before {
-  content: ''; position: absolute; width: 620px; height: 620px; border-radius: 50%;
-  background: rgba(78, 224, 171, .12); top: -220px; right: -160px; filter: blur(10px);
-}
-.vision .container { position: relative; z-index: 1; }
-.stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.8rem 1rem; margin-top: 2.6rem; }
-.stat__num { display: block; font-size: clamp(2rem, 3.4vw, 2.8rem); font-weight: 800; color: var(--verde-claro); line-height: 1; }
-.stat__label { font-size: .9rem; color: rgba(255,255,255,.7); }
-
 /* ---------- Proceso ---------- */
 .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.4rem; }
 .step {
@@ -338,18 +313,6 @@ svg { width: 100%; height: 100%; }
   font-size: .62rem; color: var(--texto-tenue); text-transform: uppercase; letter-spacing: .08em;
 }
 .avatar img { width: 100%; height: 100%; object-fit: cover; }
-
-/* ---------- CTA ---------- */
-.cta {
-  padding: clamp(60px, 8vw, 110px) 0;
-  background:
-    radial-gradient(720px 420px at 50% 0%, rgba(20, 192, 136, .22), transparent 70%),
-    var(--fondo-alt);
-  border-top: 1px solid var(--borde);
-  border-bottom: 1px solid var(--borde);
-}
-.cta__inner { text-align: center; max-width: 720px; margin-inline: auto; }
-.cta .lead { margin-bottom: 2.2rem; }
 
 /* ---------- Blog ---------- */
 .posts { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.6rem; }
@@ -517,7 +480,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 @media (max-width: 560px) {
   .hero__actions .btn { width: 100%; }
   .hero__badges { gap: 1.2rem; }
-  .stats { grid-template-columns: 1fr 1fr; }
   .form__grid { grid-template-columns: 1fr; gap: 0; }
   .plan { padding: 2rem 1.6rem; }
   .plan__name { font-size: 1.3rem; }

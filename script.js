@@ -62,44 +62,6 @@
     revelables.forEach(function (el) { obs.observe(el); });
   }
 
-  /* ---------- Contadores ---------- */
-  var contadores = document.querySelectorAll('[data-count]');
-
-  function animarContador(el) {
-    var destino = parseFloat(el.dataset.count);
-    var decimales = parseInt(el.dataset.decimals || '0', 10);
-    var sufijo = el.dataset.suffix || '';
-    var duracion = 1400;
-    var inicio = null;
-
-    if (reducedMotion) {
-      el.textContent = destino.toFixed(decimales).replace('.', ',') + sufijo;
-      return;
-    }
-
-    function paso(ts) {
-      if (inicio === null) inicio = ts;
-      var p = Math.min((ts - inicio) / duracion, 1);
-      var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = (destino * eased).toFixed(decimales).replace('.', ',') + sufijo;
-      if (p < 1) requestAnimationFrame(paso);
-    }
-    requestAnimationFrame(paso);
-  }
-
-  if ('IntersectionObserver' in window) {
-    var obsNum = new IntersectionObserver(function (entradas) {
-      entradas.forEach(function (entrada) {
-        if (!entrada.isIntersecting) return;
-        animarContador(entrada.target);
-        obsNum.unobserve(entrada.target);
-      });
-    }, { threshold: 0.5 });
-    contadores.forEach(function (el) { obsNum.observe(el); });
-  } else {
-    contadores.forEach(animarContador);
-  }
-
   /* ---------- Enlace activo en la navegación ---------- */
   var enlaces = Array.prototype.slice.call(document.querySelectorAll('.nav__list a'));
   var secciones = enlaces

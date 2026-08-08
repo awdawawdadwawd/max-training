@@ -55,8 +55,7 @@ Para colocar una imagen real, sustituye el contenido del recuadro por una etique
   `5491100000000`. Reemplazalo por el real: código de país + área, sin `+`, espacios ni
   guiones. Cada botón de Servicios lleva un mensaje distinto ya escrito, así sabés desde
   qué plan te escriben.
-- **Instagram:** los dos enlaces apuntan a `instagram.com/maxtraining`, que es un usuario
-  de ejemplo.
+- **Instagram:** ya apunta a la cuenta real, `@mr_entrenamiento` (sección Contacto y footer).
 
 No hay formulario de contacto: toda la conversión pasa por WhatsApp e Instagram.
 

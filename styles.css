@@ -285,38 +285,37 @@ svg { width: 100%; height: 100%; }
 .step h3 { font-size: 1.08rem; margin-bottom: .5rem; }
 .step p { color: var(--texto-suave); font-size: .95rem; margin: 0; }
 
-/* ---------- Planes ---------- */
-.plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.6rem; align-items: stretch; }
+/* ---------- Planes (tarjetas claras sobre fondo oscuro) ---------- */
+.plans { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.6rem; align-items: stretch; }
 .plan {
-  position: relative; background: var(--superficie); border-radius: 24px; padding: 2.4rem 2rem;
-  border: 1px solid var(--borde); display: flex; flex-direction: column;
+  position: relative; background: #fff; border-radius: 22px; padding: 2.5rem 2.3rem;
+  border: 1px solid transparent; display: flex; flex-direction: column;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, .45);
   transition: transform var(--trans), box-shadow var(--trans), border-color var(--trans);
 }
-.plan:hover { transform: translateY(-6px); box-shadow: var(--sombra); border-color: var(--borde-fuerte); }
-.plan--featured {
-  background: linear-gradient(160deg, rgba(20,192,136,.14) 0%, var(--superficie) 45%);
-  border-color: rgba(20,192,136,.45);
-  box-shadow: var(--sombra-alta), 0 0 0 1px rgba(20,192,136,.15) inset;
+.plan:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 65px rgba(0, 0, 0, .6);
+  border-color: rgba(20, 192, 136, .5);
 }
-.plan--featured:hover { border-color: var(--verde); }
-.plan__tag {
-  position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
-  background: var(--verde); color: var(--sobre-verde); font-size: .7rem; font-weight: 800;
-  letter-spacing: .12em; text-transform: uppercase; padding: .4rem 1rem; border-radius: var(--radio-pill);
-  box-shadow: var(--brillo);
-}
-.plan__name { font-size: 1.35rem; font-weight: 800; margin-bottom: .5rem; }
-.plan__desc { font-size: .95rem; color: var(--texto-suave); min-height: 3.2em; }
-.plan__price { font-size: 1rem; font-weight: 600; margin: .6rem 0 1.6rem; color: var(--texto); }
-.plan__price span { font-size: 2.9rem; font-weight: 800; letter-spacing: -.03em; color: #fff; }
-.plan__price small { font-size: .85rem; color: var(--texto-tenue); font-weight: 500; }
-.plan__list { display: grid; gap: .75rem; margin-bottom: 2rem; flex: 1; }
-.plan__list li { position: relative; padding-left: 1.9rem; font-size: .95rem; color: var(--texto-suave); }
+.plan__name { font-size: 1.45rem; font-weight: 700; color: #101413; margin-bottom: .8rem; }
+.plan__desc { font-size: .95rem; color: #6b7280; margin-bottom: 1.7rem; }
+.plan__list { display: grid; gap: .9rem; margin-bottom: 2.2rem; flex: 1; }
+.plan__list li { position: relative; padding-left: 1.5rem; font-size: .98rem; color: #4b5563; }
 .plan__list li::before {
-  content: '✓'; position: absolute; left: 0; top: 1px;
-  width: 1.3rem; height: 1.3rem; display: grid; place-items: center;
-  background: var(--verde-tinte); color: var(--verde); border-radius: 50%; font-size: .72rem; font-weight: 800;
+  content: '•'; position: absolute; left: .3rem; top: -.15rem;
+  color: #9ca3af; font-size: 1.25rem; line-height: 1.5;
 }
+
+/* Botón de WhatsApp: sin mayúsculas, alineado a la izquierda */
+.btn--wa {
+  align-self: flex-start;
+  background: var(--verde); color: var(--sobre-verde);
+  text-transform: none; letter-spacing: normal;
+  font-size: .95rem; font-weight: 600; padding: .85rem 1.6rem;
+}
+.btn--wa:hover { background: var(--verde-claro); transform: translateY(-3px); box-shadow: var(--brillo); }
+.btn--wa svg { width: 18px; height: 18px; flex: none; }
 
 /* ---------- Reseñas ---------- */
 .reviews { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.6rem; }
@@ -512,6 +511,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   .grid-2 { grid-template-columns: 1fr; }
   .grid-2--reverse > div:first-child { order: 0; }
   .img-slot--portrait { aspect-ratio: 4 / 3; }
+  .plans { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {
@@ -519,6 +519,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   .hero__badges { gap: 1.2rem; }
   .stats { grid-template-columns: 1fr 1fr; }
   .form__grid { grid-template-columns: 1fr; gap: 0; }
+  .plan { padding: 2rem 1.6rem; }
+  .plan__name { font-size: 1.3rem; }
   .footer__inner { grid-template-columns: 1fr; }
   .fab span { display: none; }
   .fab { padding: 1rem; }

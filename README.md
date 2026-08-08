@@ -53,6 +53,10 @@ Para colocar una imagen real, sustituye el contenido del recuadro por una etique
   sección de contacto y en el footer.
 - **Formulario:** valida en el navegador pero todavía no envía nada. Hay un `TODO` en
   `script.js` donde conectar Formspree, EmailJS o un backend propio.
+- **WhatsApp:** los cuatro botones de la sección Servicios apuntan al número de ejemplo
+  `5491100000000`. Reemplazalo por el número real (código de país + área, sin `+` ni espacios)
+  en las cuatro URLs `wa.me` de `index.html`. Cada botón lleva un mensaje distinto ya escrito,
+  así sabés desde qué plan te escriben.
 
 ## Accesibilidad
 

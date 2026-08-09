@@ -416,8 +416,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   .nav__list a::after { display: none; }
   .nav__cta { margin-top: 1.4rem; }
 
-  .hero { min-height: auto; padding-bottom: 0; }
-  .hero__media { position: relative; inset: auto; margin-top: 2.5rem; height: 62vw; max-height: 460px; }
+  /* El hero deja de ser dos columnas: la foto pasa debajo del texto */
+  .hero { min-height: auto; padding-bottom: 0; flex-direction: column; align-items: stretch; }
+  .hero__media {
+    position: relative; inset: auto; width: 100%;
+    margin-top: 2.5rem; height: 62vw; max-height: 460px;
+  }
   .hero__media .img-slot { border-radius: 0; }
   .hero__fade { background: linear-gradient(180deg, var(--fondo) 0%, rgba(10,13,12,0) 32%, rgba(10,13,12,.75) 100%); }
   .hero__inner { order: -1; }

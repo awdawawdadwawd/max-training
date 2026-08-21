@@ -1,6 +1,7 @@
-# MAX Training — Landing de entrenador personal
+# Máximo Romero Entrenamiento — Landing
 
-Página web de una sola pantalla para un entrenador personal, en español y con tema oscuro.
+Página web de una sola pantalla para Máximo Romero, entrenador e instructor en musculación
+de Santa Fe Capital. Español rioplatense, paleta monocroma (negro, gris y blanco).
 HTML, CSS y JavaScript sin dependencias ni proceso de compilación.
 
 ## Ver la página
@@ -45,10 +46,9 @@ Para colocar una imagen real, sustituye el contenido del recuadro por una etique
 ## Personalizar
 
 - **Colores:** todas las variables están al principio de `styles.css`, en `:root`.
-  Cambiando `--verde`, `--verde-claro`, `--verde-tinte` y `--verde-hondo` cambia el acento
-  de toda la web.
-- **Nombre y datos de contacto:** email, teléfono y dirección son de ejemplo. Aparecen en la
-  sección de contacto y en el footer.
+  La paleta es monocroma: `--fondo`, `--superficie` y `--texto` para los grises, y
+  `--acento` (blanco) para botones y detalles. Cambiando `--acento` y `--sobre-acento`
+  se puede introducir un color de marca sin tocar nada más.
 - **WhatsApp:** hay siete enlaces `wa.me` en `index.html` (los cuatro botones de Servicios,
   el de Contacto, el del footer y el botón flotante), todos con el número real
   `5493424863765`. Si alguna vez cambia, el formato es código de país + área + número,
@@ -58,6 +58,14 @@ Para colocar una imagen real, sustituye el contenido del recuadro por una etique
 
 No hay formulario de contacto: toda la conversión pasa por WhatsApp e Instagram, así que
 esos enlaces son el único canal de entrada. Si dejan de funcionar, la página deja de convertir.
+
+## Contenido pendiente de completar
+
+- **Reseñas:** las tres tarjetas de la sección Opiniones son marcadores de posición.
+  Hay que reemplazar el texto, el nombre y el plan por opiniones reales de alumnos.
+- **Imágenes:** hero, retrato de Sobre mí y los tres avatares de las reseñas.
+- **Textos legales:** los enlaces del footer a aviso legal, privacidad y cookies no
+  apuntan a ninguna página todavía.
 
 ## Accesibilidad
 

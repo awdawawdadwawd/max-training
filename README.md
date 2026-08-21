@@ -20,27 +20,26 @@ img/          Imágenes del sitio
 
 ## Secciones
 
-Hero · Marquesina · Sobre mí · Tu objetivo · El proceso · Servicios ·
+Hero · Marquesina · Sobre mí · Tu objetivo · El proceso · Galería · Servicios ·
 Preguntas frecuentes · Contacto · Footer
 
-## Imágenes pendientes
+## Imágenes
 
-Los huecos de imagen se ven como un recuadro punteado con el texto «Insertar imagen».
-Cada uno está marcado con un atributo `data-slot`:
+Las fotos viven en `img/` y están optimizadas para web (lado largo de 1200 a 1600 px,
+JPEG de calidad 80-86). Las cinco juntas pesan unos 750 KB.
 
-| `data-slot`              | Dónde va                    | Proporción |
-| ------------------------ | --------------------------- | ---------- |
-| `hero`                   | Foto principal              | vertical   |
-| `sobre-mi`               | Retrato de la sección Sobre mí | 4:5     |
+| Archivo          | Dónde se usa                | Proporción del hueco |
+| ---------------- | --------------------------- | -------------------- |
+| `hero.jpg`       | Foto principal              | vertical, recortada  |
+| `sobre-mi.jpg`   | Retrato de la sección Sobre mí | 4:5               |
+| `galeria-1..3.jpg` | Sección «Así se entrena»  | 3:4                  |
 
-Para colocar una imagen real, sustituye el contenido del recuadro por una etiqueta `img`
-(el CSS ya la recorta a la medida correcta):
+Para reemplazar una foto, pisá el archivo con otro del mismo nombre y actualizá los
+atributos `width` y `height` de la etiqueta `img` en `index.html` para que coincidan con
+las nuevas dimensiones (evitan que el texto salte mientras carga la imagen).
 
-```html
-<div class="img-slot img-slot--hero" data-slot="hero">
-  <img src="img/hero.jpg" alt="Entrenador personal en el gimnasio">
-</div>
-```
+Antes de subir una foto nueva conviene reducirla: las fotos de teléfono pesan varios
+megabytes y harían la página muy lenta en datos móviles.
 
 ## Personalizar
 
@@ -60,9 +59,10 @@ esos enlaces son el único canal de entrada. Si dejan de funcionar, la página d
 
 ## Contenido pendiente de completar
 
-- **Imágenes:** hero y retrato de Sobre mí.
 - **Textos legales:** los enlaces del footer a aviso legal, privacidad y cookies no
   apuntan a ninguna página todavía.
+- **Foto del hero:** la actual llegó por WhatsApp a 717x1280, que es poco para el tamaño
+  que ocupa en pantallas grandes. Si aparece el original de la cámara, conviene sustituirla.
 
 ## Accesibilidad
 

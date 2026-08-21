@@ -44,7 +44,8 @@
 <section class="hero" id="inicio">
   <div class="hero__media">
     <div class="img-slot img-slot--hero" data-slot="hero">
-      <span class="img-slot__label">Insertar imagen</span>
+      <img src="img/hero.jpg" width="717" height="1280"
+           alt="Máximo Romero en la sala de musculación de Exodium Fit Center">
     </div>
     <div class="hero__fade" aria-hidden="true"></div>
   </div>
@@ -87,7 +88,8 @@
   <div class="container grid-2">
     <div class="reveal">
       <div class="img-slot img-slot--portrait" data-slot="sobre-mi">
-        <span class="img-slot__label">Insertar imagen</span>
+        <img src="img/sobre-mi.jpg" width="785" height="1400" loading="lazy"
+             alt="Máximo Romero corrigiendo la técnica de una alumna en press de banca">
       </div>
     </div>
     <div class="reveal">
@@ -230,8 +232,34 @@
   </div>
 </section>
 
+<!-- ============ GALERÍA ============ -->
+<section class="section section--alt" id="galeria">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">El lugar</p>
+      <h2 class="h2">Así se entrena</h2>
+      <p class="lead lead--center">Sesiones en Exodium Fit Center, Santa Fe Capital.</p>
+    </div>
+
+    <div class="galeria">
+      <figure class="galeria__item reveal">
+        <img src="img/galeria-1.jpg" width="904" height="1200" loading="lazy"
+             alt="Máximo supervisando una serie de press de banca">
+      </figure>
+      <figure class="galeria__item reveal">
+        <img src="img/galeria-2.jpg" width="904" height="1200" loading="lazy"
+             alt="Máximo asistiendo a un alumno con mancuernas">
+      </figure>
+      <figure class="galeria__item reveal">
+        <img src="img/galeria-3.jpg" width="904" height="1200" loading="lazy"
+             alt="Sala de musculación de Exodium Fit Center durante una sesión">
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- ============ SERVICIOS ============ -->
-<section class="section section--alt" id="servicios">
+<section class="section" id="servicios">
   <div class="container">
     <div class="section__head reveal">
       <p class="eyebrow">Servicios</p>
@@ -261,7 +289,7 @@
 
       <article class="plan reveal">
         <h3 class="plan__name">Semipersonalizado</h3>
-        <p class="plan__badge">Presencial · requiere cuota de gimnasio</p>
+        <a class="plan__badge plan__badge--link" href="#cuota-gimnasio">Presencial · requiere cuota de gimnasio</a>
         <ul class="plan__list">
           <li>Evaluación inicial</li>
           <li>Rutina 100% personalizada</li>
@@ -283,7 +311,7 @@
 
       <article class="plan reveal">
         <h3 class="plan__name">Personalizado Premium</h3>
-        <p class="plan__badge">Presencial · requiere cuota de gimnasio</p>
+        <a class="plan__badge plan__badge--link" href="#cuota-gimnasio">Presencial · requiere cuota de gimnasio</a>
         <ul class="plan__list">
           <li>Evaluación inicial completa</li>
           <li>
@@ -305,7 +333,7 @@
       </article>
     </div>
 
-    <aside class="aviso reveal">
+    <aside class="aviso reveal" id="cuota-gimnasio">
       <h3>Sobre la cuota del gimnasio</h3>
       <p>
         Los planes <strong>Semipersonalizado</strong> y <strong>Personalizado Premium</strong>
@@ -331,7 +359,7 @@
 </section>
 
 <!-- ============ FAQ ============ -->
-<section class="section" id="faq">
+<section class="section section--alt" id="faq">
   <div class="container container--narrow">
     <div class="section__head reveal">
       <p class="eyebrow">Dudas frecuentes</p>
@@ -364,7 +392,7 @@
 </section>
 
 <!-- ============ CONTACTO ============ -->
-<section class="section section--alt" id="contacto">
+<section class="section" id="contacto">
   <div class="container contacto reveal">
     <p class="eyebrow">Contacto</p>
     <h2 class="h2">Demos juntos el primer paso</h2>

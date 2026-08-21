@@ -21,7 +21,7 @@ img/          Imágenes del sitio
 ## Secciones
 
 Hero · Marquesina · Sobre mí · Tu objetivo · El proceso · Servicios ·
-Opiniones · Preguntas frecuentes · Contacto · Footer
+Preguntas frecuentes · Contacto · Footer
 
 ## Imágenes pendientes
 
@@ -32,7 +32,6 @@ Cada uno está marcado con un atributo `data-slot`:
 | ------------------------ | --------------------------- | ---------- |
 | `hero`                   | Foto principal              | vertical   |
 | `sobre-mi`               | Retrato de la sección Sobre mí | 4:5     |
-| `avatar-1`, `avatar-2`, `avatar-3` | Fotos de las reseñas | 1:1     |
 
 Para colocar una imagen real, sustituye el contenido del recuadro por una etiqueta `img`
 (el CSS ya la recorta a la medida correcta):
@@ -61,9 +60,7 @@ esos enlaces son el único canal de entrada. Si dejan de funcionar, la página d
 
 ## Contenido pendiente de completar
 
-- **Reseñas:** las tres tarjetas de la sección Opiniones son marcadores de posición.
-  Hay que reemplazar el texto, el nombre y el plan por opiniones reales de alumnos.
-- **Imágenes:** hero, retrato de Sobre mí y los tres avatares de las reseñas.
+- **Imágenes:** hero y retrato de Sobre mí.
 - **Textos legales:** los enlaces del footer a aviso legal, privacidad y cookies no
   apuntan a ninguna página todavía.
 

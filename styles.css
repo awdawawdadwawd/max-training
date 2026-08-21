@@ -256,7 +256,14 @@ svg { width: 100%; height: 100%; }
   transform: translateY(-6px); box-shadow: var(--sombra);
   border-color: var(--borde-fuerte); background: var(--superficie-2);
 }
-.plan__name { font-size: 1.45rem; font-weight: 700; color: var(--texto); margin-bottom: 1.6rem; }
+.plan__name { font-size: 1.45rem; font-weight: 700; color: var(--texto); margin-bottom: .9rem; }
+.plan__badge {
+  display: inline-block; margin: 0 0 1.6rem;
+  font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--texto-suave); background: var(--acento-tinte);
+  border: 1px solid rgba(255, 255, 255, .14);
+  padding: .35rem .85rem; border-radius: var(--radio-pill);
+}
 .plan__list { display: grid; gap: .9rem; margin-bottom: 2.2rem; flex: 1; }
 .plan__list li { position: relative; padding-left: 1.5rem; font-size: .97rem; color: var(--texto-suave); }
 .plan__list li::before {
@@ -277,6 +284,23 @@ svg { width: 100%; height: 100%; }
 }
 .btn--wa:hover { background: var(--acento-apag); transform: translateY(-3px); box-shadow: var(--brillo); }
 .btn--wa svg { width: 18px; height: 18px; flex: none; }
+
+/* ---------- Aviso de la cuota del gimnasio ---------- */
+.aviso {
+  margin-top: 1.6rem;
+  background: var(--superficie); border: 1px solid var(--borde-fuerte);
+  border-radius: var(--radio); padding: clamp(1.6rem, 3vw, 2.2rem);
+}
+.aviso h3 { font-size: 1.12rem; margin-bottom: .9rem; }
+.aviso p { color: var(--texto-suave); font-size: .97rem; }
+.aviso p:last-child { margin-bottom: 0; }
+.aviso strong { color: var(--texto); font-weight: 600; }
+.aviso ul { display: grid; gap: .75rem; margin: 1.1rem 0 1.3rem; }
+.aviso li { position: relative; padding-left: 1.5rem; color: var(--texto-suave); font-size: .97rem; }
+.aviso li::before {
+  content: '•'; position: absolute; left: .3rem; top: -.15rem;
+  color: var(--texto); font-size: 1.25rem; line-height: 1.5;
+}
 
 /* ---------- FAQ ---------- */
 .faq { display: grid; gap: .8rem; }

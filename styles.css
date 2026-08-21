@@ -331,6 +331,10 @@ svg { width: 100%; height: 100%; }
   content: '•'; position: absolute; left: .3rem; top: -.15rem;
   color: var(--texto); font-size: 1.25rem; line-height: 1.5;
 }
+.aviso__nota {
+  display: block; margin-top: .55rem; font-size: .9rem; line-height: 1.55;
+  color: var(--texto-tenue); border-left: 2px solid var(--borde-fuerte); padding-left: .8rem;
+}
 
 /* ---------- FAQ ---------- */
 .faq { display: grid; gap: .8rem; }

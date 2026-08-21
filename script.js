@@ -62,6 +62,31 @@
     revelables.forEach(function (el) { obs.observe(el); });
   }
 
+  /* ---------- Videos de la galería ----------
+     Solo se descargan y reproducen cuando entran en pantalla, para no
+     gastar datos de quien nunca baja hasta ahí. */
+  var videos = document.querySelectorAll('.galeria video');
+
+  function conControles(v) { v.controls = true; v.preload = 'metadata'; }
+
+  if (videos.length) {
+    if (reducedMotion || !('IntersectionObserver' in window)) {
+      videos.forEach(conControles);
+    } else {
+      var obsVid = new IntersectionObserver(function (entradas) {
+        entradas.forEach(function (entrada) {
+          var v = entrada.target;
+          if (!entrada.isIntersecting) { v.pause(); return; }
+          var intento = v.play();
+          // Si el navegador bloquea la reproducción automática, dejamos los controles
+          if (intento && intento.catch) intento.catch(function () { conControles(v); });
+        });
+      }, { threshold: 0.35 });
+
+      videos.forEach(function (v) { obsVid.observe(v); });
+    }
+  }
+
   /* ---------- Enlace activo en la navegación ---------- */
   var enlaces = Array.prototype.slice.call(document.querySelectorAll('.nav__list a'));
   var secciones = enlaces

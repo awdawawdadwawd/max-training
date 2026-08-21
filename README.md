@@ -33,6 +33,19 @@ JPEG de calidad 80-86). Las cinco juntas pesan unos 750 KB.
 | `hero.jpg`       | Foto principal              | vertical, recortada  |
 | `sobre-mi.jpg`   | Retrato de la sección Sobre mí | 4:5               |
 | `galeria-1..3.jpg` | Sección «Así se entrena»  | 3:4                  |
+| `poster-1..2.jpg`  | Fotograma de respaldo de cada video | 3:4          |
+
+## Videos
+
+Están en `video/`, recortados a 6 segundos, sin audio y comprimidos en H.264.
+Se reproducen solos, en bucle y en silencio, dentro de la galería.
+
+Con `preload="none"` no se descargan hasta que la persona baja hasta la galería, y
+`script.js` los arranca y los pausa según entren o salgan de la pantalla. Quien nunca
+llega a esa sección no gasta ni un byte en ellos.
+
+Si el navegador bloquea la reproducción automática, o si el sistema tiene activado
+«reducir movimiento», aparecen los controles en lugar de reproducirse solos.
 
 Para reemplazar una foto, pisá el archivo con otro del mismo nombre y actualizá los
 atributos `width` y `height` de la etiqueta `img` en `index.html` para que coincidan con
@@ -61,8 +74,11 @@ esos enlaces son el único canal de entrada. Si dejan de funcionar, la página d
 
 - **Textos legales:** los enlaces del footer a aviso legal, privacidad y cookies no
   apuntan a ninguna página todavía.
-- **Foto del hero:** la actual llegó por WhatsApp a 717x1280, que es poco para el tamaño
-  que ocupa en pantallas grandes. Si aparece el original de la cámara, conviene sustituirla.
+## Nota sobre las fotos que se envían por WhatsApp
+
+WhatsApp recomprime las imágenes que se mandan como foto: una de 2288x4080 llega a
+718x1280 y pierde definición. Para conservar la calidad hay que enviarlas como
+**documento** (el clip → «Documento»), no desde la galería de fotos.
 
 ## Accesibilidad
 
